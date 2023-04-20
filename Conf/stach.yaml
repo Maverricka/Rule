@@ -1,0 +1,418 @@
+subscribe-url: url
+proxy-providers:
+  Wepie:
+    url: url
+    interval: 600
+
+proxy-groups:
+  # 功能分组
+  - name: Proxy
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png
+    include-all: true
+    type: select
+
+  - name: Apple
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+
+  - name: China
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png
+    type: select
+    proxies:
+      - DIRECT
+      - Proxy
+
+  - name: Netflix
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Disney+
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney%2B.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Spotify
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: YouTube
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: GlobalMedia
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/DomesticMedia.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Speedtest
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+  
+  - name: OpenAI
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/SSID_1.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Scholar
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Scholar.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Cloudflare
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Global
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+    type: select
+    proxies: 
+      - Auto
+      - Proxy
+      - HongKong
+      - Taiwan
+      - Singapore
+      - Japan
+      - United States
+      - DIRECT
+
+  - name: Final
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+
+  # 基于地区分组
+  - name: Auto
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+  - name: HongKong
+    filter: "港|🇭🇰|HK|(?i)Hong"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+  - name: Taiwan
+    filter: "台|🇨🇳|🇹🇼|湾|TW|(?i)Taiwan"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+  - name: Singapore
+    filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+  - name: Japan
+    filter: "日|🇯🇵|东京|JP|(?i)Japan"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+  - name: United States
+    filter: "美|🇺🇲|US|(?i)States|American"
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png
+    interval: 120
+    lazy: true
+    tolerance: 50
+    type: url-test
+    include-all: true
+
+
+
+rules:
+  # Privacy
+  - RULE_SET,Privacy,REJECT
+  - RULE_SET,Privacy_Domain,REJECT
+  # Apple
+  - RULE_SET,Apple,Apple
+  - RULE_SET,Apple_Domain,Apple
+  # Apple LBS
+  - DOMAIN-SUFFIX,iphone-ld.apple.com,DIRECT
+  - DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
+  - DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
+  - DOMAIN-SUFFIX,push.apple.com,DIRECT
+  # Apple OCSP
+  - PROCESS-NAME,trustd,Proxy
+  # China
+  - RULE_SET,ChinaMax,China
+  - RULE_SET,ChinaMax_IP,Apple 
+  - RULE_SET,ChinaMax_Domain,Apple
+  # Netflix
+  - RULE-SET,Netflix,Netflix
+  # Disney+
+  - RULE-SET,Disney,Disney+
+  # Spotify
+  - RULE-SET,Spotify,Spotify
+  # GlobalMedia
+  - RULE_SET,GlobalMedia,Apple
+  - RULE_SET,GlobalMedia_Domain,Apple
+  # Speedtest
+  - RULE-SET,Speedtest,Speedtest
+  # OpenAI
+  - RULE-SET,OpenAI,OpenAI
+  # Telegram
+  - IP-ASN,62014,Proxy,no-resolve
+  - IP-ASN,59930,Proxy,no-resolve
+  - IP-ASN,44907,Proxy,no-resolve
+  - IP-ASN,211157,Proxy,no-resolve
+  - PROCESS-NAME,Telegram,Proxy
+  - RULE-SET,Telegram,Telegram
+  # YouTube
+  - RULE-SET,YouTube,YouTube
+  # Google
+  - RULE-SET,Google,Proxy
+  # Microsoft
+  - RULE-SET,Microsoft@CN,DIRECT
+  - RULE-SET,Microsoft,Microsoft
+  # Scholar
+  - RULE-SET,Scholar,Scholar
+  # Cloudflare
+  - RULE-SET,Cloudflare,Cloudflare
+  # common Proxy utils
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,Surge,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,trojan,DIRECT
+  - PROCESS-NAME,trojan-go,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,CloudflareWARP,DIRECT
+  - PROCESS-NAME,Cloudflare WARP,DIRECT
+  - IP-CIDR,162.159.193.0/24,DIRECT,no-resolve
+  - PROCESS-NAME,p4pclient,DIRECT
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qbittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Final
+script:
+
+dns:
+  enhanced-mode: fake-ip
+  default-nameserver:
+    - 114.114.115.115
+    - 119.28.28.28
+    - 223.6.6.6
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+log-level: info
+mode: rule
+
+rule-providers:
+  Apple:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml
+  Apple_Domain:
+    behavior: domain-text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple_Domain.txt
+  ChinaMax:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax.yaml
+  ChinaMax_IP:
+    behavior: ipcidr
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_IP.yaml
+  ChinaMax_Domain:
+    behavior: domain-text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMax/ChinaMax_Domain.txt
+  Netflix:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/netflix.yaml
+  Disney:
+    behavior: domain
+    interval: 86400
+    type: http
+    url: https://rules.kr328.app/disney.yaml
+  Spotify:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/spotify.yaml
+  YouTube:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/youtube.yaml
+  GlobalMedia:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+  GlobalMedia_Domain:
+    behavior: domain-text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia_Domain.txt
+  Speedtest:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/spotify.yaml
+  OpenAI:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OpenAI/OpenAI.yaml
+  Telegram:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/telegram.yaml
+  Google:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
+  Microsoft:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
+  Microsoft@CN:
+    behavior: domain
+    interval: 86400
+    url: https://rules.kr328.app/microsoft@cn.yaml
+  Scholar:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalScholar/GlobalScholar.yaml
+  Cloudflare:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Cloudflare/Cloudflare.yaml
+  Global:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global.yaml
+  Global_Domain:
+    behavior: domain-text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Global/Global_Domain.txt
+  Privacy:
+    behavior: classical
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy.yaml
+  Privacy_Domain:
+    behavior: domain-text
+    interval: 86400
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Privacy/Privacy_Domain.txt
+
+
+
+
+   
+
+
+    
