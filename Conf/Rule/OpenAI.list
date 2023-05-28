@@ -9,4 +9,4 @@ HOST,openaiapi-site.azureedge.net,OpenAI
 HOST-SUFFIX,ai.com,OpenAI
 HOST-SUFFIX,identrust.com,OpenAI
 HOST-SUFFIX,openai.com,OpenAI
-HOST-SUFFIX,openai.com,sentry.io
+HOST-SUFFIX,sentry.io,OpenAI
