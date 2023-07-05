@@ -1,6 +1,6 @@
 subscribe-url: url
 proxy-providers:
-  Wepie:
+  proxyname:
     url: url
     interval: 600
 
